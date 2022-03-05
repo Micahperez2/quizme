@@ -27,13 +27,13 @@
                 }
 
                 h1 {
-                font-size: 60px;
+                font-size: 60vw;
                 text-align: center;
                 color: white;
                 }
 
                 h3{
-                font-size: 25px;
+                font-size: 2vw;
                 color: white;
                 }
 
@@ -42,25 +42,24 @@
                 background-color: rgba(0,0,0, .4); 
                 color: black;
                 font-weight: bold;
-                border: 3px solid #f1f1f1;
+                border: .5vw solid #f1f1f1;
                 position: absolute;
-                top: 60%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 1300px;
-                padding: 20px;
-                margin-left: 40px;
+                width: 80vw;
+                padding: 2vw;
                 font-family: 'Helvetica', cursive;
                 }
 
                 .button button{
                 display: block;
                 justify-content: left;
-                width: 1000px; 
-                height: 40px;
-                border: 2px #BB86FC;
-                border-radius: 10px;
-                margin-top: 10px;
+                width: 70vw; 
+                height: 3vw;
+                border: .5vw #BB86FC;
+                border-radius: 1vw;
+                margin-top: 1vw;
                 text-align: left;
                 background-color: white;
                 color: black;
@@ -72,16 +71,19 @@
                 }
 
                 #next {
-                margin-left: 1150px;
-                width: 70px; 
-                height: 30px;
-                border: 3px solid white;
-                border-radius: 10px;
-                margin-top: 50px;
-                text-align: left;
+                margin-left: 74vw;
+                width: 4vw; 
+                height: 2vw;
+                border: .2vw solid white;
+                border-radius: 10vw;
+                margin-top: 4vw;
                 background-color: black;
-                text-align: center;
                 color: white;
+                }
+
+              p{
+                font-size: 1vw;
+                margin: auto;
                 }
 
         </style>
@@ -106,8 +108,8 @@ function myFunction(element, bgcolor, txcolor){
         <div class="background"></div>
   
         <div class="text">
-        <h3>Question: 1/5</h3>
-        <h3>What is Django?</h3> 
+        <h3>Question: {{ Question.qnumber }}/5</h3>
+        <h3>{{ Question.question }}?</h3> 
       
           <!--
           <div class="button">
@@ -116,13 +118,14 @@ function myFunction(element, bgcolor, txcolor){
           <button id="correct">Apple</button>
           <button id="wrong">Apple</button>
         </div> 
-      --> 
+      --> <form action="/question/" method="POST">{% csrf_token %}
            <div class="button">
-          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
-          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
-          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
-          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
-        </div> 
+            <button type="submit" name="one" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer1 }}</button>
+            <button type="submit" name="two" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer2 }}</button>
+            <button type="submit" name="three" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer3 }}</button>
+            <button type="submit" name="four" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer4 }}</button>
+            </div> 
+        </form>
       
         <div class="button">
           <button id="next" onclick="myFunction(this,'blue')">Next->      </button>
