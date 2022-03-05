@@ -1,8 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-    <h1> {{ Question.question }} </h1>
-</body>
+    <head>
+        <title>QuizMe | Quiz Yourself on Today's Trending Topics</title>
+        <style>
+
+            :root {
+                color-scheme: light dark;
+                supported-color-schemes: light dark;
+            }
+
+            .background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                filter: blur(10x);
+                -webkit-filter: blur(2px);
+                background-color: black;
+            }
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+
+            .text {
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0, .4); 
+                color: black;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1300px;
+                padding: 20px;
+                margin-left: 40px;
+                font-family: 'Helvetica', cursive;
+            }
+
+            .article{
+                background-color: #a6cfff;
+                color: black;
+                border: 2px solid white;
+                margin: 20px;
+                padding: 20px;
+                height: 600px;
+                width: 33%;
+                overflow-y: scroll;
+                font-family: Helvetica;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="background"></div>
+  
+        <div class="text">
+        <div id="article">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non finibus tortor, sed ullamcorper massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nulla lacus, maximus at tristique et, accumsan eget metus. Suspendisse arcu nisl, malesuada sit amet ante et, auctor porttitor nisl. Ut dictum leo metus, ac accumsan sem volutpat ac. Nulla leo eros, ultrices quis gravida id, rutrum at enim. Nam et volutpat nunc. Phasellus eu mollis nisl. Aliquam eget scelerisque ex, in dapibus nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse mollis sem sed nunc finibus congue. Aliquam fringilla, turpis sed efficitur ultricies, urna dolor pellentesque augue, quis hendrerit nunc mauris nec eros.</p>
+
+            <p>Maecenas auctor bibendum ante, quis ultrices magna porta sit amet. Quisque sit amet lorem in erat fermentum mollis. Fusce in pellentesque nisl. Nam bibendum congue sapien, nec pharetra mi commodo vel. Sed suscipit nunc sed nisi consectetur sodales consequat vitae risus. Duis vitae mi eu sem iaculis efficitur vitae eget justo. Aenean et massa ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In lacinia, mauris nec semper bibendum, est justo tristique felis, vitae eleifend massa sem et justo. Donec fringilla consequat massa eget cursus. Integer est ante, dignissim vitae ipsum sit amet, semper elementum lorem. Morbi ut augue vestibulum, hendrerit justo non, gravida orci. Phasellus blandit, felis vel sagittis porta, dui elit blandit risus, et commodo nunc leo sed lectus. Cras quis nibh nibh. Nullam id diam massa.</p>
+            
+            <p>Integer fringilla non neque eget ornare. Sed vel neque id odio mollis accumsan et vitae dui. Nunc eu velit ac nulla dignissim vehicula quis a justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc porta dolor magna, at malesuada mi ornare et. Aliquam erat volutpat. Aliquam gravida sollicitudin consequat. Sed nec libero nisl. Sed rhoncus odio quis magna molestie, eget laoreet mauris convallis. Nunc non vulputate erat. Donec porta a nulla ut semper. In venenatis aliquet nisi sit amet condimentum. Suspendisse et commodo metus.</p>
+            
+            <p>Ut faucibus dui sit amet ultrices varius. Phasellus nec accumsan orci, a blandit est. Nulla id lectus in lorem facilisis viverra. Pellentesque diam ligula, tincidunt vel posuere a, lacinia sed leo. Quisque vehicula ipsum vel sapien dignissim facilisis. Etiam consectetur eu lectus convallis pretium. Aenean quis malesuada elit, ut cursus mi. Cras dapibus nibh id tempor semper. Suspendisse at eros elit. Suspendisse lobortis, urna ac rutrum molestie, quam quam dictum nibh, iaculis congue ipsum diam ac odio.</p>
+            
+            <h4>Lorem ipsum dolor sit amet</h4>
+            <p>Duis ac nibh condimentum, laoreet nibh quis, viverra purus. Cras et ligula congue, maximus augue eu, venenatis purus. Donec sagittis sed lorem et aliquam. Aliquam quis velit molestie, suscipit neque eget, mattis lorem. Aenean ultrices lacus turpis, sed lacinia metus ullamcorper in. Curabitur iaculis lectus eget lectus malesuada lobortis vitae eu neque. Phasellus vitae egestas diam. Phasellus venenatis dui arcu, sed sollicitudin erat consequat ac. Cras nibh justo, ornare efficitur quam at, molestie mollis ipsum. Suspendisse hendrerit elementum turpis ut elementum. Morbi maximus nisl at massa mollis, dictum scelerisque leo congue. Vestibulum varius eu purus nec aliquet. Mauris in odio eget velit feugiat pharetra eget at arcu. Mauris euismod dictum orci vel hendrerit. Ut semper ligula nec orci volutpat laoreet.</p>
+ 
+            <a href="{% url 'question' %}">Questions Tab</a>
+            </div> 
+        </div>
+    </body>
 </html>

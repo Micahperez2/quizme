@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QuizMe | Quiz Yourself on Today's Trending Topics</title>
+        <style>
+            .article{
+                background-color: #eeeeee;
+                color: black;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+            :root {
+                color-scheme: light dark;
+                supported-color-schemes: light dark;
+                }
+
+                .background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                filter: blur(10x);
+                -webkit-filter: blur(2px);
+                background-color: black;
+                }
+
+                h1 {
+                font-size: 60px;
+                text-align: center;
+                color: white;
+                }
+
+                h3{
+                font-size: 25px;
+                color: white;
+                }
+
+                .text {
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0, .4); 
+                color: black;
+                font-weight: bold;
+                border: 3px solid #f1f1f1;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1300px;
+                padding: 20px;
+                margin-left: 40px;
+                font-family: 'Helvetica', cursive;
+                }
+
+                .button button{
+                display: block;
+                justify-content: left;
+                width: 1000px; 
+                height: 40px;
+                border: 2px #BB86FC;
+                border-radius: 10px;
+                margin-top: 10px;
+                text-align: left;
+                background-color: white;
+                color: black;
+                }
+
+                .button button:hover{
+                background-color: #1426B5;
+                color: white;
+                }
+
+                #next {
+                margin-left: 1150px;
+                width: 70px; 
+                height: 30px;
+                border: 3px solid white;
+                border-radius: 10px;
+                margin-top: 50px;
+                text-align: left;
+                background-color: black;
+                text-align: center;
+                color: white;
+                }
+
+        </style>
+        <Script>
+function myFunction(element, bgcolor, txcolor){
+   var buttons = document.querySelectorAll("button");
+  
+    for( var i =0; i < buttons.length-1; ++i )
+    {
+       buttons[i].style.backgroundColor = "white";
+       buttons[i].style.color = "black";
+    }
+       
+  element.style.backgroundColor = bgcolor;
+  element.style.color = txcolor;
+}
+
+        </Script>
+    </head>
+
+    <body>
+        <div class="background"></div>
+  
+        <div class="text">
+        <h3>Question: 1/5</h3>
+        <h3>What is Django?</h3> 
+      
+          <!--
+          <div class="button">
+          <button id="wrong">Apple</button>
+          <button id="wrong">Apple</button>
+          <button id="correct">Apple</button>
+          <button id="wrong">Apple</button>
+        </div> 
+      --> 
+           <div class="button">
+          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
+          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
+          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
+          <button onclick="myFunction(this,'#1426B5', 'white')">Apple</button>
+        </div> 
+      
+        <div class="button">
+          <button id="next" onclick="myFunction(this,'blue')">Next->      </button>
+        </div> 
+    </body>
+</html>
