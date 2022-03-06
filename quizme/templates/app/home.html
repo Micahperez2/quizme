@@ -1,78 +1,119 @@
 <!DOCTYPE html>
 <html>
     <head>
+        {% load static %}
         <title>QuizMe | Quiz Yourself on Today's Trending Topics</title>
         <style>
+#article{
+    background-color: #d9ebff;
+    color: black;
+    border: 2px solid black;
+    margin: auto;
+    padding: 20px;
+    height: 500px;
+    width: 50%;
+    overflow-y: scroll;
+    font-family: Helvetica;
+}
 
-            :root {
-                color-scheme: light dark;
-                supported-color-schemes: light dark;
-            }
+#subhead{
+    color: rgb(255, 0, 0);
+}
 
-            .background {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                filter: blur(10x);
-                -webkit-filter: blur(2px);
-                background-color: black;
-                }
+.button button{
+    display: block;
+    justify-content: right;
+    width: 20%;
+    height: 60px;
+    border: .5vw #BB86FC;
+    border-radius: 1vw;
+    margin-top: 1vw;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin:0 auto;
+    display:block;
+    margin-top:20px;
+    }
 
-            h1 {
-                color: white;
-            }
-
-            p {
-                color: white;
-            }
-
-            .text {
-                background-color: rgb(0,0,0); 
-                background-color: rgba(0,0,0, .4); 
-                color: black;
-                font-weight: bold;
-                border: .5vw solid #f1f1f1;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80vw;
-                padding: 2vw;
-                font-family: 'Helvetica', cursive;
-                }
-
-            .article{
-                background-color: #a6cfff;
-                color: black;
-                border: 2px solid white;
-                margin: 20px;
-                padding: 20px;
-                height: 600px;
-                width: 33%;
-                overflow-y: scroll;
-                font-family: Helvetica;
-            }
+    .button button:hover{
+    background-color: #1426B5;
+    color: white;
+    }
+:root{
+    color-scheme: light dark;
+    -moz-border-left-colors: light dark;
+    }
+    img {
+margin-top: 20px;
+margin-left: 20px;
+}
         </style>
     </head>
 
     <body>
-        <div class="background"></div>
-  
-        <div class="text">
+        <img src={%static 'images/logo.png' %} height="120" width="120">
         <div id="article">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non finibus tortor, sed ullamcorper massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nulla lacus, maximus at tristique et, accumsan eget metus. Suspendisse arcu nisl, malesuada sit amet ante et, auctor porttitor nisl. Ut dictum leo metus, ac accumsan sem volutpat ac. Nulla leo eros, ultrices quis gravida id, rutrum at enim. Nam et volutpat nunc. Phasellus eu mollis nisl. Aliquam eget scelerisque ex, in dapibus nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse mollis sem sed nunc finibus congue. Aliquam fringilla, turpis sed efficitur ultricies, urna dolor pellentesque augue, quis hendrerit nunc mauris nec eros.</p>
+            <h1 id="title" style="text-align:center; color:#cf0000">How AI is shaping the cybersecurity arms race</h1>
+            <p>
+                The average business receives 10,000 alerts every day from the various software tools it uses to monitor for intruders, malware and other threats. Cybersecurity staff often find themselves inundated with data they need to sort through to manage their cyber defenses.
+            </p>
 
-            <p>Maecenas auctor bibendum ante, quis ultrices magna porta sit amet. Quisque sit amet lorem in erat fermentum mollis. Fusce in pellentesque nisl. Nam bibendum congue sapien, nec pharetra mi commodo vel. Sed suscipit nunc sed nisi consectetur sodales consequat vitae risus. Duis vitae mi eu sem iaculis efficitur vitae eget justo. Aenean et massa ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In lacinia, mauris nec semper bibendum, est justo tristique felis, vitae eleifend massa sem et justo. Donec fringilla consequat massa eget cursus. Integer est ante, dignissim vitae ipsum sit amet, semper elementum lorem. Morbi ut augue vestibulum, hendrerit justo non, gravida orci. Phasellus blandit, felis vel sagittis porta, dui elit blandit risus, et commodo nunc leo sed lectus. Cras quis nibh nibh. Nullam id diam massa.</p>
+            <p>
+                The stakes are high. Cyberattacks are increasing and affect thousands of organizations and millions of people in the U.S. alone.
+            </p>
+
+            <p>
+                These challenges underscore the need for better ways to stem the tide of cyber-breaches. Artificial intelligence is particularly well suited to finding patterns in huge amounts of data. As a researcher who studies AI and cybersecurity, I find that AI is emerging as a much-needed tool in the cybersecurity toolkit.
+            </p>
+
+            <h4 id="subhead">
+                Helping Humans
+            </h4>
             
-            <p>Integer fringilla non neque eget ornare. Sed vel neque id odio mollis accumsan et vitae dui. Nunc eu velit ac nulla dignissim vehicula quis a justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc porta dolor magna, at malesuada mi ornare et. Aliquam erat volutpat. Aliquam gravida sollicitudin consequat. Sed nec libero nisl. Sed rhoncus odio quis magna molestie, eget laoreet mauris convallis. Nunc non vulputate erat. Donec porta a nulla ut semper. In venenatis aliquet nisi sit amet condimentum. Suspendisse et commodo metus.</p>
+            <p>
+                There are two main ways AI is bolstering cybersecurity. First, AI can help automate many tasks that a human analyst would often handle manually. These include automatically detecting unknown workstations, servers, code repositories and other hardware and software on a network. It can also determine how best to allocate security defenses. These are data-intensive tasks, and AI has the potential to sift through terabytes of data much more efficiently and effectively than a human could ever do.
+            </p>
             
-            <p>Duis ac nibh condimentum, laoreet nibh quis, viverra purus. Cras et ligula congue, maximus augue eu, venenatis purus. Donec sagittis sed lorem et aliquam. Aliquam quis velit molestie, suscipit neque eget, mattis lorem. Aenean ultrices lacus turpis, sed lacinia metus ullamcorper in. Curabitur iaculis lectus eget lectus malesuada lobortis vitae eu neque. Phasellus vitae egestas diam. Phasellus venenatis dui arcu, sed sollicitudin erat consequat ac. Cras nibh justo, ornare efficitur quam at, molestie mollis ipsum. Suspendisse hendrerit elementum turpis ut elementum. Morbi maximus nisl at massa mollis, dictum scelerisque leo congue. Vestibulum varius eu purus nec aliquet. Mauris in odio eget velit feugiat pharetra eget at arcu. Mauris euismod dictum orci vel hendrerit. Ut semper ligula nec orci volutpat laoreet.</p>
- 
-            <a href="{% url 'question' %}">Questions Tab</a>
-            </div> 
+            
+            <p>
+                Second, AI can help detect patterns within large quantities of data that human analysts can't see. For example, AI could detect the key linguistic patterns of hackers posting emerging threats in the dark web and alert analysts.
+            </p>
+
+            <p>
+                More specifically, AI-enabled analytics can help discern the jargon and code words hackers develop to refer to their new tools, techniques and procedures. One example is using the name Mirai to mean botnet. Hackers developed the term to hide the botnet topic from law enforcement and cyberthreat intelligence professionals.
+            </p>
+
+            <p>
+                AI has already seen some early successes in cybersecurity. Increasingly, companies such as FireEye, Microsoft and Google are developing innovative AI approaches to detect malware, stymie phishing campaigns and monitor the spread of disinformation. One notable success is Microsoft's Cyber Signals program that uses AI to analyze 24 trillion security signals, 40 nation-state groups and 140 hacker groups to produce cyberthreat intelligence for C-level executives.
+            </p>
+
+            <p>
+                Federal funding agencies such as the Department of Defense and the National Science Foundation recognize the potential of AI for cybersecurity and have invested tens of millions of dollars to develop advanced AI tools for extracting insights from data generated from the dark web and open-source software platforms such as GitHub, a global software development code repository where hackers, too, can share code.
+            </p>
+
+            <h4 id="subhead">Downsides of AI</h4>
+            <p>
+                Despite the significant benefits of AI for cybersecurity, cybersecurity professionals have questions and concerns about AI’s role. Companies might be thinking about replacing their human analysts with AI systems, but might be worried about how much they can trust automated systems. It's also not clear whether and how the well-documented AI problems of bias, fairness, transparency and ethics will emerge in AI-based cybersecurity systems.
+            </p>
+
+            <p>
+                Also, AI is useful not only for cybersecurity professionals trying to turn the tide against cyberattacks, but also for malicious hackers. Attackers are using methods like reinforcement learning and generative adversarial networks, which generate new content or software based on limited examples, to produce new types of cyberattacks that can evade cyber defenses. Researchers and cybersecurity professionals are still learning all the ways malicious hackers are using AI.
+            </p>
+
+            <h4 id="subhead">The Road Ahead</h4>
+            <p>
+                Looking forward, there is significant room for growth for AI in cybersecurity. In particular, the predictions AI systems make based on the patterns they identify will help analysts respond to emerging threats. AI is an intriguing tool that could help stem the tide of cyberattacks and, with careful cultivation, could become a required tool for the next generation of cybersecurity professionals.
+            </p>
+
+            <p>
+                The current pace of innovation in AI, however, indicates that fully automated cyber battles between AI attackers and AI defenders is likely years away.
+            </p>
         </div>
+
+        <div class="button">
+            <a href="{% url 'question' %}">
+            <button class="text-center" id="next" onclick="myFunction(this,'blue')">Ready to quiz yourself? Click here!</button> </a>
+          </div> 
     </body>
 </html>

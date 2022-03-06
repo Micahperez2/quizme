@@ -1,91 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
+        {% load static %}
         <title>QuizMe | Quiz Yourself on Today's Trending Topics</title>
         <style>
-            .article{
-                background-color: #eeeeee;
-                color: black;
-                border: 2px solid black;
-                margin: 20px;
-                padding: 20px;
-            }
-            :root {
-                color-scheme: light dark;
-                supported-color-schemes: light dark;
-                }
+#article{
+    background-color: #d9ebff;
+    color: black;
+    border: 2px solid black;
+    margin: auto;
+    padding: 20px;
+    height: 400px;
+    width: 50%;
+    overflow-y: scroll;
+    font-family: Helvetica;
+}
 
-                .background {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                filter: blur(10x);
-                -webkit-filter: blur(2px);
-                background-color: black;
-                }
+#subhead{
+    color: rgb(255, 0, 0);
+}
 
-                h1 {
-                font-size: 60vw;
-                text-align: center;
-                color: white;
-                }
+/* .button button{
+    display: block;
+    justify-content: right;
+    width: 20%;
+    height: 60px;
+    border: .5vw #BB86FC;
+    border-radius: 1vw;
+    margin-top: 1vw;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin:0 auto;
+    margin-top:20px;
+    } */
 
-                h3{
-                font-size: 2vw;
-                color: white;
-                }
+    .center {
+        text-align: center;
+    }
 
-                .text {
-                background-color: rgb(0,0,0); 
-                background-color: rgba(0,0,0, .4); 
-                color: black;
-                font-weight: bold;
-                border: .5vw solid #f1f1f1;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80vw;
-                padding: 2vw;
-                font-family: 'Helvetica', cursive;
-                }
+    .buttons {
+        margin: 0 auto;
+        display: block;
+    }
 
-                .button button{
-                display: block;
-                justify-content: left;
-                width: 70vw; 
-                height: 3vw;
-                border: .5vw #BB86FC;
-                border-radius: 1vw;
-                margin-top: 1vw;
-                text-align: left;
-                background-color: white;
-                color: black;
-                }
+    .action_btn {
+        width: 40%;
+        height: 120px;
+        border: .5vw #BB86FC;
+        text-align: center;
+        margin: 0 auto;
+        display: inline;
+        margin: 5px;
+    }
 
-                .button button:hover{
-                background-color: #1426B5;
-                color: white;
-                }
-
-                #next {
-                margin-left: 74vw;
-                width: 4vw; 
-                height: 2vw;
-                border: .2vw solid white;
-                border-radius: 10vw;
-                margin-top: 4vw;
-                background-color: black;
-                color: white;
-                }
-
-              p{
-                font-size: 1vw;
-                margin: auto;
-                }
-
+    .button button:hover{
+    background-color: #1426B5;
+    color: white;
+    }
+:root{
+    color-scheme: light dark;
+    -moz-border-left-colors: light dark;
+    }
+    img {
+margin-top: 20px;
+margin-left: 20px;
+}
         </style>
         <Script>
 function myFunction(element, bgcolor, txcolor){
@@ -106,29 +86,22 @@ function myFunction(element, bgcolor, txcolor){
 
     <body>
         <div class="background"></div>
+        <a href="{% url 'home' %}">
+            <img src={%static 'images/logo.png' %} height="120" width="120">
+        </a>
   
-        <div class="text">
+        <!-- <div class="text"> -->
+        <div id="article">
         <h3>Question: {{ Question.qnumber }}/5</h3>
-        <h3>{{ Question.question }}?</h3> 
+        <h3 class="center">{{ Question.question }}?</h3> 
       
-          <!--
-          <div class="button">
-          <button id="wrong">Apple</button>
-          <button id="wrong">Apple</button>
-          <button id="correct">Apple</button>
-          <button id="wrong">Apple</button>
-        </div> 
-      --> <form action="/question/" method="POST">{% csrf_token %}
-           <div class="button">
-            <button type="submit" name="one" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer1 }}</button>
-            <button type="submit" name="two" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer2 }}</button>
-            <button type="submit" name="three" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer3 }}</button>
-            <button type="submit" name="four" onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer4 }}</button>
+        <form action="/question/" method="POST">{% csrf_token %}
+           <div class="center">
+            <button class="action_btn" type="submit" name="val" value=1 onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer1 }}</button>
+            <button class="action_btn" type="submit" name="val" value=2 onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer2 }}</button>  
+            <button class="action_btn submit" type="submit" name="val" value=3 onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer3 }}</button>
+            <button class="action_btn submit" type="submit" name="val" value=4 onclick="myFunction(this,'#1426B5', 'white')">{{ Question.answer4 }}</button>
             </div> 
         </form>
-      
-        <div class="button">
-          <button id="next" onclick="myFunction(this,'blue')">Next->      </button>
-        </div> 
     </body>
 </html>
