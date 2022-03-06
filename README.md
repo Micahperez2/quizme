@@ -1,6 +1,12 @@
 # quizme
 QuizMe is a online webapp built in Django that allows users to learn about a new topic every day and be quizzed on it. 
 
+### Teams Discord Names
+MicahPerez2#4996
+t0p#3753
+mrMuffin157#5195
+Drew#6936
+
 ### User Features
 - QuizMe allowers the user a clean interface to read through an article
 - After reading the article, users are asked 5 basic questions and are given a score at the end
