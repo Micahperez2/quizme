@@ -1,6 +1,6 @@
 question_number, correct_question, question, answer_1, answer_2, answer_3, answer_4
-1,1, What is one way AI is improving cybersecurity, Helps automate tasks that would normally be done manually, Find hackers before they can attack, Makes software so unusable hacking isn't worth it, Create uncrackable passwords
-2,3, What Microsoft program uses AI to produce cyberthreat intelligence to C-level excecutives, Databricks Program, Siri, Cyber Signals Program, Project FireEye
-3,3, What open-source platform did the article mention where some hackers share code, Bitbucket, Facebook, Github, Jenkins
-4,4, What is one downside of AI mentioned, Writing AI is difficult, AI is not useful for cybersecurity specifically, There is no downside of AI, AI can also be used by malicious hackers
-5,2, Based on the current pace of automation - how soon does the article predict that full AI cyber battles will take place, In the next 10 years, Years away, Never, Currently happening
+1,1,What is one way AI is improving cybersecurity,Helps automate tasks that would normally be done manually,Find hackers before they can attack,Makes software so unusable hacking isn't worth it,Create uncrackable passwords
+2,3,What Microsoft program uses AI to produce cyberthreat intelligence to C-level excecutives,Databricks Program,Siri,Cyber Signals Program,Project FireEye
+3,3,What open-source platform did the article mention where some hackers share code,Bitbucket,Facebook,Github,Jenkins
+4,4,What is one downside of AI mentioned, Writing AI is difficult,AI is not useful for cybersecurity specifically,There is no downside of AI,AI can also be used by malicious hackers
+5,2,Based on the current pace of automation - how soon does the article predict that full AI cyber battles will take place,In the next 10 years,Years away,Never,Currently happening

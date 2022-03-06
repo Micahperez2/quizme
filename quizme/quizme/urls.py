@@ -23,5 +23,4 @@ urlpatterns = [
     path('', app_views.home, name='home'),
     path('question/', app_views.question, name='question'),
     path('score/', app_views.score, name='score'),
-    #path(r'^$', TemplateView.as_view(template_name='Article.html'), name="article")
 ]

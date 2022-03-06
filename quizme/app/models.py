@@ -18,8 +18,10 @@ class Question(models.Model):
     answer3 = models.CharField(max_length=20)
     answer4 = models.CharField(max_length=20)
 
+#Model for phone number field
 class PhoneNumber(models.Model):
     phone = PhoneNumberField(null=False, blank=True, unique=True)
 
+#Model to hold the users final score
 class FinalScore(models.Model):
     final_score = models.IntegerField(default=0)
