@@ -3,6 +3,7 @@
     <head>
         {% load static %}
         <title>QuizMe | Quiz Yourself on Today's Trending Topics</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/Logo.ico' %}"/>
         <style>
 #article{
     background-color: #d9ebff;
@@ -11,7 +12,7 @@
     margin: auto;
     padding: 20px;
     height: 400px;
-    width: 50%;
+    width: 75%;
     overflow-y: scroll;
     font-family: Helvetica;
 }
@@ -19,22 +20,6 @@
 #subhead{
     color: rgb(255, 0, 0);
 }
-
-/* .button button{
-    display: block;
-    justify-content: right;
-    width: 20%;
-    height: 60px;
-    border: .5vw #BB86FC;
-    border-radius: 1vw;
-    margin-top: 1vw;
-    text-align: center;
-    background-color: white;
-    color: black;
-    margin:0 auto;
-    margin-top:20px;
-    } */
-
     .center {
         text-align: center;
     }
@@ -87,13 +72,15 @@ function myFunction(element, bgcolor, txcolor){
     <body>
         <div class="background"></div>
         <a href="{% url 'home' %}">
-            <img src={%static 'images/logo.png' %} height="120" width="120">
+            <img src={%static 'images/logo.png' %} height=10% width=10%>
         </a>
   
         <!-- <div class="text"> -->
         <div id="article">
-        <h3>Question: {{ Question.qnumber }}/5</h3>
-        <h3 class="center">{{ Question.question }}?</h3> 
+        <h3 style="color:#cf0000">Question: {{ Question.qnumber }}/5</h3>
+        <h3 class="center">
+            {{ Question.question }}?
+        </h3> 
       
         <form action="/question/" method="POST">{% csrf_token %}
            <div class="center">

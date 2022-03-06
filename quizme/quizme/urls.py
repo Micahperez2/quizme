@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views as app_views
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', app_views.home, name='home'),
     path('question/', app_views.question, name='question'),
+    path('score/', app_views.score, name='score'),
+    #path(r'^$', TemplateView.as_view(template_name='Article.html'), name="article")
 ]

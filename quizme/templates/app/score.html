@@ -11,7 +11,7 @@
     border: 2px solid black;
     margin: auto;
     padding: 20px;
-    height: 500px;
+    height: 200px;
     width: 75%;
     overflow-y: scroll;
     font-family: Helvetica;
@@ -25,9 +25,10 @@
     display: block;
     justify-content: right;
     width: 20%;
-    height: 35%;
+    height: 60px;
     border: .5vw #BB86FC;
     border-radius: 1vw;
+    margin-top: 1vw;
     text-align: center;
     background-color: white;
     color: black;
@@ -53,15 +54,18 @@
     </head>
 
     <body>
-        <img src={%static 'images/logo.png' %} height=10% width=10%>
+        <a href="{% url 'home' %}">
+            <img src={%static 'images/logo.png' %} height=10% width=10%>
+        </a>
         <div id="article">
-        {% autoescape off %}
-            {{Article.body}}
-        {% endautoescape %}
-    </div> 
-        <div class="button">
-            <a href="{% url 'question' %}">
-            <button class="text-center" id="next" onclick="myFunction(this,'blue')">Ready to quiz yourself? Click here!</button> </a>
+            <h1 id="title" style="text-align:center; color:#cf0000">{{ FinalScore.final_score }}</h1>
+            <div style="text-align:center">
+            <h4> Recieve Daily Updates To Learn New Topics </h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </form>
         </div>
+    </div>
     </body>
 </html>

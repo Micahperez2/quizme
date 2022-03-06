@@ -1,11 +1,12 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
 # Model for Article
 class Article(models.Model):
-    title = models.CharField(max_length=35)
-    body = models.CharField(max_length=200)
+    body = models.TextField(max_length=5000)
+    date = models.CharField(max_length=20)
 
 # Model for individual question
 class Question(models.Model):
@@ -16,3 +17,9 @@ class Question(models.Model):
     answer2 = models.CharField(max_length=20)
     answer3 = models.CharField(max_length=20)
     answer4 = models.CharField(max_length=20)
+
+class PhoneNumber(models.Model):
+    phone = PhoneNumberField(null=False, blank=True, unique=True)
+
+class FinalScore(models.Model):
+    final_score = models.IntegerField(default=0)
