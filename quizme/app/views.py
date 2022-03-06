@@ -56,7 +56,7 @@ def score(request):
         if form.is_valid():
             client_num = form.cleaned_data['phone']
             account_sid = 'AC20836d59b47c39c0ab168acbec14359a' 
-            auth_token = '6b4b87b935d808784a15fdcf7e2f914d' 
+            auth_token = '' 
             client = Client(account_sid, auth_token) 
             message = client.messages.create( 
                 from_='+17402793165',      
